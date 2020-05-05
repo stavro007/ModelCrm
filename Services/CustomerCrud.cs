@@ -24,6 +24,7 @@ namespace ModelCrm.Services
                 IsActive = true,
                 TotalGross = 0M
             };
+            
             using CrmAppDbContext dbContext = new CrmAppDbContext();
             dbContext.Customers.Add(customer);
             dbContext.SaveChanges();

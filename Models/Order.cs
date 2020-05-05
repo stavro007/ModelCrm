@@ -14,6 +14,6 @@ namespace ModelCrm.Models
 
      public decimal TotalAmount { get; set; }
 
-     public List<Product> Products { get; set; }
+     public List<OrderProduct> OrderProducts { get; set; }
     }
 }

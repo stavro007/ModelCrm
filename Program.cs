@@ -9,7 +9,7 @@ namespace ModelCrm
     {
         static void Main(string[] args)
         {
-            CustomerOptions custOpt = new CustomerOptions
+            /*CustomerOptions custOpt = new CustomerOptions
             {
                 FirstName = "Dimitris",
                 LastName = "Dimitriou",
@@ -20,14 +20,28 @@ namespace ModelCrm
                 Dob = new DateTime(1970, 12, 31),
             };
 
-
-
-            CustomerCrud custCrud = new CustomerCrud();
-
-
+            CustomerCrud custCrud = new CustomerCrud();  
 
             Customer customer = custCrud.CreateCustomer(custOpt);
 
+            Console.WriteLine($"Id = {customer.Id} " +
+                $"FirstName= {customer.FirstName}");
+            */
+
+            ProductOptions productopt = new ProductOptions
+            {
+                Code = "randomcode",
+                Name = "acer_laptop",
+                Description = "New Model with i7 intel processor",
+                Price = 567.5M,
+                Quantity = 50,
+            };
+
+            ProductCrud productCrud = new ProductCrud();
+            Product product = productCrud.CreateProduct(productopt);
+
+            Console.WriteLine($"Id = {product.Id} " +
+                $"FirstName= {product.Name}");
 
 
             //Console.WriteLine("Id = " 
@@ -38,8 +52,7 @@ namespace ModelCrm
 
 
 
-            Console.WriteLine($"Id = {customer.Id} " +
-                $"FirstName= {customer.FirstName}");
+
         }
     }
 }
